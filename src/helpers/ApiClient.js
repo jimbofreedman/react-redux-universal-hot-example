@@ -33,6 +33,9 @@ class _ApiClient {
           request.set('cookie', req.get('cookie'));
         }
 
+        // Don't accept HTML back
+        request.set('Accept', 'application/json');
+
         if (data) {
           request.send(data);
         }
