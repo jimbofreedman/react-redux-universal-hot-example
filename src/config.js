@@ -3,14 +3,14 @@ require('babel/polyfill');
 const environment = {
   development: {
     isProduction: false,
-    apiProtocol: 'https',
-    apiHost: 'openwoodhouse-api.herokuapp.com',
-    apiPort: '443'
+    apiProtocol: 'http',
+    apiHost: 'localhost',
+    apiPort: '80'
   },
   production: {
     isProduction: true,
     apiProtocol: 'https',
-    apiHost: 'openwoodhouse-api.herokuapp.com',
+    apiHost: 'api.example.com',
     apiPort: '443'
   }
 }[process.env.NODE_ENV || 'development'];
