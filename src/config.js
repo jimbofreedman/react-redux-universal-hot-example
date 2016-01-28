@@ -5,7 +5,7 @@ const environment = {
     isProduction: false,
     apiProtocol: 'http',
     apiHost: 'localhost',
-    apiPort: '80'
+    apiPort: '8000'
   },
   production: {
     isProduction: true,
