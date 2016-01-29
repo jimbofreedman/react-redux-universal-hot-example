@@ -10,7 +10,7 @@ const environment = {
   production: {
     isProduction: true,
     apiProtocol: 'https',
-    apiHost: 'api.example.com',
+    apiHost: 'yplox-api.herokuapp.com',
     apiPort: '443'
   }
 }[process.env.NODE_ENV || 'development'];
@@ -19,15 +19,15 @@ module.exports = Object.assign({
   host: process.env.HOST || 'localhost',
   port: process.env.PORT,
   app: {
-    title: 'React Redux Example',
+    title: 'YesPlease demo',
     description: 'All the modern best practices in one example.',
     meta: {
       charSet: 'utf-8',
       property: {
-        'og:site_name': 'React Redux Example',
+        'og:site_name': 'YesPlease demo',
         'og:image': 'https://react-redux.herokuapp.com/logo.jpg',
         'og:locale': 'en_US',
-        'og:title': 'React Redux Example',
+        'og:title': 'YesPlease demo',
         'og:description': 'All the modern best practices in one example.',
         'twitter:card': 'summary',
         'twitter:site': '@erikras',

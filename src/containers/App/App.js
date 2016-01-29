@@ -6,6 +6,7 @@ import { Navbar, NavBrand, Nav, NavItem, CollapsibleNav } from 'react-bootstrap'
 import DocumentMeta from 'react-document-meta';
 import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
+import { isLoaded as isProductListLoaded, load as loadProductList } from 'redux/modules/products';
 import { InfoBar } from 'components';
 import { pushState } from 'redux-router';
 import connectData from 'helpers/connectData';
@@ -18,6 +19,9 @@ function fetchData(getState, dispatch) {
   }
   if (!isAuthLoaded(getState())) {
     promises.push(dispatch(loadAuth()));
+  }
+  if (!isProductListLoaded(getState())) {
+    promises.push(dispatch(loadProductList()));
   }
   return Promise.all(promises);
 }
