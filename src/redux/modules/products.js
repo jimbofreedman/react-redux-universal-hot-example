@@ -3,7 +3,8 @@ const LOAD_SUCCESS = 'yplox/products/LOAD_SUCCESS';
 const LOAD_FAIL = 'yplox/products/LOAD_FAIL';
 
 const initialState = {
-  loaded: false
+  loaded: false,
+  data: []
 };
 
 export default function info(state = initialState, action = {}) {
